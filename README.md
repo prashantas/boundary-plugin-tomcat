@@ -8,8 +8,7 @@ Collects metrics from a Apache Tomcat instances
 |:----------|:-----:|:-------:|:-------:|:----:|
 | Supported |   v   |    v    |    v    |  v   |
 
-* Java 1.7 or later.
-* This plugin is compatible with Tomcat 2.1 or later.
+
 
 #### Boundary Meter versions v4.2 or later
 
@@ -18,16 +17,22 @@ Collects metrics from a Apache Tomcat instances
 
 ### Plugin Setup
 
-In order for the plugin to collect statistics from Cassandra you need to ensure that JMX endpoint is operational. By default Cassandra listens on 7199 of your localhost.
+In order for the plugin to collect statistics from Tomcat you need to configure  JMX endpoint for Tomcat installed.To set the CATALINA_OPTS environment variable(assuming JMX endpoint as  8999 of your localhost)
+On Windows:
+ 	set CATALINA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=localhost";
+ 	
+On Linux:
+	$ CATALINA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=localhost";
+	$ export CATALINA_OPTS; 	
 
 ### Plugin Configuration Fields
 
 |Field Name    | Description                                                                                              |
 |:-------------|:---------------------------------------------------------------------------------------------------------|
-| Host          | Host of the Cassandra JMX endpoint                |
-| Port          | Port of the Cassandra JMX endpoint. Defaults to 7199         |
-| Username      | Username to access the Cassandra JMX endpoint |
-| Password      | Password to access the Cassandra JMX endpoint |
+| Host          | Host of the Tomcat JMX endpoint                |
+| Port          | Port of the Tomcat JMX endpoint. Defaults to 8999         |
+| Username      | Username to access the Tomcat JMX endpoint |
+| Password      | Password to access the Tomcat JMX endpoint |
 | Source        | The Source to display in the legend for the metrics data.  It will default to the hostname of the server.|
 | Poll Interval | How often should the plugin poll for metrics. |
 
@@ -35,42 +40,27 @@ In order for the plugin to collect statistics from Cassandra you need to ensure 
 
 |Metric Name                                   |Description                                                               |
 |:---------------------------------------------|:-------------------------------------------------------------------------|
-|  CASSANDRA_COMPACTION_PENDING_TASKS | Estimated number of pending compaction tasks. |
-| CASSANDRA_COMPACTION_COMPLETED_TASKS | Estimated number of completed compaction tasks. | 
-| CASSANDRA_COMPACTION_TOTAL_COMPLETED_RATE | Estimated number of completed compaction tasks per second. |
-| CASSANDRA_COMPACTION_BYTES_COMPACTED | Number of bytes compacted since node started. |
-| CASSANDRA_CACHE_KEYCACHE_HITRATE | Cache hit rate for KeyCache. |
-| CASSANDRA_CACHE_KEYCACHE_REQUESTS_RATE | Cache request count for KeyCache per second. |
-| CASSANDRA_CACHE_KEYCACHE_ENTRIES | Number of entries on KeyCache. |
-| CASSANDRA_CACHE_KEYCACHE_SIZE | Cache size in bytes for KeyCache. |
-| CASSANDRA_CACHE_KEYCACHE_CAPACITY | Cache capacity in bytes for KeyCache. |
-| CASSANDRA_CACHE_ROWCACHE_HITRATE | Cache hit rate for RowCache. |
-| CASSANDRA_CACHE_ROWCACHE_REQUEST_RATE | Cache request count for RowCache per second. | 
-| CASSANDRA_CACHE_ROWCACHE_ENTRIES | Number of entries on RowCache. |
-| CASSANDRA_CACHE_ROWCACHE_SIZE | Cache size in bytes for RowCache. |
-| CASSANDRA_CACHE_ROWCACHE_CAPACITY | Cache capacity in bytes for RowCache. |
-| CASSANDRA_CACHE_COUNTERCACHE_HITRATE | Cache hit rate for CounterCache. |
-| CASSANDRA_CACHE_COUNTERCACHE_REQUEST_RATE | Cache request count for CounterCache per second. | 
-| CASSANDRA_CACHE_COUNTERCACHE_ENTRIES | Number of entries on CounterCache. |
-| CASSANDRA_CACHE_COUNTERCACHE_SIZE | Cache size in bytes for CounterCache. |
-| CASSANDRA_CACHE_COUNTERCHE_CAPACITY | Cache capacity in bytes for CounterCache. |
-| CASSANDRA_HEAP_MEMORY_USED | Total Heap Memory used by the Cassandra instance. |
-| CASSANDRA_WRITE_LATENCY_MEAN | Latency on write operations. |
-| CASSANDRA_WRITE_FAILURES_RATE | Number of failures per second on write operations. |
-| CASSANDRA_WRITE_TIMEOUTS_RATE | Number of timeouts per second on write operations. | 
-| CASSANDRA_READ_LATENCY_MEAN | Latency on read operations. |
-| CASSANDRA_READ_FAILURES_RATE | Number of failures per second on read operations. |
-| CASSANDRA_READ_TIMEOUTS_RATE | Number of timeouts per second on read operations. |
-| CASSANDRA_CLIENT_CONNECTED_NATIVE_CLIENTS | Number of native clients connected. |
-| CASSANDRA_CLIENT_CONNECTED_THRIFT_CLIENTS | Number of thrift clients connected. |
-| CASSANDRA_STORAGE_LOAD_BYTES | Total disk space in bytes used for this node. |
-| CASSANDRA_STORAGE_COMMITLOG_SIZE | Current data size of all commit log segments. |
+|  TOMCAT_JVM_FREE_MEMORY 	Free memory of the JVM in MBytes.
+TOMCAT_JVM_TOTAL_MEMORY 	Total memory of the JVM in Mbytes.
+TOMCAT_HTTP_CURRENT_THREAD_COUNT 	Current thread count
+TOMCAT_HTTP_CURRENT_THREAD_BUSY 	Current thread busy
+TOMCAT_HTTP_MAX_PROCESSING_TIME 	Maximum processing time reached for requests (ms)
+TOMCAT_HTTP_REQUEST_COUNT 	Total numbers of requests counter
+TOMCAT_HTTP_ERROR_COUNT 	Total numbers of errors counter
+TOMCAT_HTTP_BYTES_SENT 	Total bytes sent in MB
+TOMCAT_HTTP_BYTES_RECEIVED 	Total bytes received in MB
+TOMCAT_MEMPOOL_HEAP_EDEN_SPACE 	Eden Space Heap memory pool usage (%)
+TOMCAT_MEMPOOL_HEAP_CMS_OLD_GEN 	CMS Old Gen Heap memory pool usage (%)
+TOMCAT_MEMPOOL_HEAP_SURVIVOR_SPACE 	Survivor Space memory pool usage (%)
+TOMCAT_MEMPOOL_NONHEAP_CMS_PERM_GEN 	CMS Perm Gen Non-heap memory pool usage (%)
+TOMCAT_MEMPOOL_NONHEAP_CODE_CACHE 	Code Cache memory pool usage (%)
 
 ### Dashboards
 
-- Cassandra General
-- Cassandra Caches 
+Dashboard 	Description
+Tomcat HTTP Service 	HTTP Metrics for the Tomcat Service
+Tomcat Memory Pool Summary 	Memory Pools of Tomcat Service
 
 ### References
 
-http://docs.datastax.com/en/cassandra/2.0/cassandra/operations/ops_monitoring_c.html
+http://tomcat.apache.org/
