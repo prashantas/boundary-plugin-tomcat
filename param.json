@@ -1,0 +1,14 @@
+{
+	"items" : [
+		{
+			"name" : "tomcat-mbeans",
+			"user" : "",
+			"password" : "",
+			"host" : "localhost",
+			"port" : 8999,
+			"pollInterval" : 1000,
+			"source" : "tomcat"
+		}
+	],
+	"pollInterval" : 1000
+}
