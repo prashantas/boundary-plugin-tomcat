@@ -18,12 +18,12 @@ Collects metrics from a Apache Tomcat instances
 ### Plugin Setup
 
 In order for the plugin to collect statistics from Tomcat you need to configure  JMX endpoint for Tomcat installed.To set the CATALINA_OPTS environment variable(assuming JMX endpoint as  8999 of your localhost)
-On Windows:
- 	set CATALINA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=localhost";
+- On Windows:
+ 	- set CATALINA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=localhost";
  	
-On Linux:
-	$ CATALINA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=localhost";
-	$ export CATALINA_OPTS; 	
+- On Linux:
+	- $ CATALINA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=8999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=localhost";
+	- $ export CATALINA_OPTS; 	
 
 ### Plugin Configuration Fields
 
@@ -53,7 +53,7 @@ On Linux:
 |TOMCAT_MEMPOOL_HEAP_OLD/TENURED_GEN| Old/Tenured Gen Heap memory pool usage (%)|
 |TOMCAT_MEMPOOL_HEAP_SURVIVOR_SPACE| Survivor Space memory pool usage (%)|
 |TOMCAT_MEMPOOL_NONHEAP_PERM_GEN| CMS Perm Gen Non-heap memory pool usage (%)|
-|TOMCAT_MEMPOOL_NONHEAP_Metaspace| Metaspace Non-heap memory pool usage (%)|
+|TOMCAT_MEMPOOL_NONHEAP_METASPACE| Metaspace Non-heap memory pool usage (%)|
 |TOMCAT_MEMPOOL_NONHEAP_CODE_CACHE| Code Cache memory pool usage (%)|
 
 ### Dashboards
