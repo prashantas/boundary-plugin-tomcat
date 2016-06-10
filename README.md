@@ -38,28 +38,29 @@ On Linux:
 
 ### Metrics Collected
 
-|Metric Name                                   |Description                                                               |
-|:---------------------------------------------|:-------------------------------------------------------------------------|
-|  TOMCAT_JVM_FREE_MEMORY 	Free memory of the JVM in MBytes.
-TOMCAT_JVM_TOTAL_MEMORY 	Total memory of the JVM in Mbytes.
-TOMCAT_HTTP_CURRENT_THREAD_COUNT 	Current thread count
-TOMCAT_HTTP_CURRENT_THREAD_BUSY 	Current thread busy
-TOMCAT_HTTP_MAX_PROCESSING_TIME 	Maximum processing time reached for requests (ms)
-TOMCAT_HTTP_REQUEST_COUNT 	Total numbers of requests counter
-TOMCAT_HTTP_ERROR_COUNT 	Total numbers of errors counter
-TOMCAT_HTTP_BYTES_SENT 	Total bytes sent in MB
-TOMCAT_HTTP_BYTES_RECEIVED 	Total bytes received in MB
-TOMCAT_MEMPOOL_HEAP_EDEN_SPACE 	Eden Space Heap memory pool usage (%)
-TOMCAT_MEMPOOL_HEAP_CMS_OLD_GEN 	CMS Old Gen Heap memory pool usage (%)
-TOMCAT_MEMPOOL_HEAP_SURVIVOR_SPACE 	Survivor Space memory pool usage (%)
-TOMCAT_MEMPOOL_NONHEAP_CMS_PERM_GEN 	CMS Perm Gen Non-heap memory pool usage (%)
-TOMCAT_MEMPOOL_NONHEAP_CODE_CACHE 	Code Cache memory pool usage (%)
+| Metric Name | Description |
+|:------------|:-----------:|
+|TOMCAT_JVM_FREE_MEMORY | Free memory of the JVM in MBytes.|
+|TOMCAT_JVM_TOTAL_MEMORY | Total memory of the JVM in Mbytes.|
+|TOMCAT_HTTP_CURRENT_THREAD_COUNT | Current thread count|
+|TOMCAT_HTTP_CURRENT_THREAD_BUSY | Current thread busy|
+|TOMCAT_HTTP_MAX_PROCESSING_TIME| Maximum processing time reached for requests (ms)|
+|TOMCAT_HTTP_REQUEST_COUNT| Total numbers of requests counter|
+|TOMCAT_HTTP_ERROR_COUNT| Total numbers of errors counter|
+|TOMCAT_HTTP_BYTES_SENT| Total bytes sent in MB|
+|TOMCAT_HTTP_BYTES_RECEIVED| Total bytes received in MB|
+|TOMCAT_MEMPOOL_HEAP_EDEN_SPACE| Eden Space Heap memory pool usage (%)|
+|TOMCAT_MEMPOOL_HEAP_CMS_OLD_GEN| CMS Old Gen Heap memory pool usage (%)|
+|TOMCAT_MEMPOOL_HEAP_SURVIVOR_SPACE| Survivor Space memory pool usage (%)|
+|TOMCAT_MEMPOOL_NONHEAP_CMS_PERM_GEN| CMS Perm Gen Non-heap memory pool usage (%)|
+|TOMCAT_MEMPOOL_NONHEAP_CODE_CACHE| Code Cache memory pool usage (%)|
 
 ### Dashboards
 
-Dashboard 	Description
-Tomcat HTTP Service 	HTTP Metrics for the Tomcat Service
-Tomcat Memory Pool Summary 	Memory Pools of Tomcat Service
+|Dashboard|Description                                     |
+|:--------|:-----------------------------------------------|
+| Tomcat HTTP Service | HTTP Metrics for the Tomcat Service |
+| Tomcat Memory Pool Summary | Memory Pools of Tomcat Service |
 
 ### References
 
