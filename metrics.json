@@ -19,8 +19,8 @@
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "Total Tomcat Http Worker busy threads.",
-    "displayName": "Busy Threads Count",
-    "displayNameShort": "Tomcat Busy Threads",
+    "displayName": "Tomcat Busy Threads Count",
+    "displayNameShort": "Tomcat Busy Threads Count",
     "unit": "number"
   },
   "TOMCAT_HTTP_CURRENT_THREAD_COUNT": {
@@ -59,16 +59,16 @@
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "",
-    "displayName": "Tomcat JVM Free Memory",
-    "displayNameShort": "Tomcat JVM Free Memory",
+    "displayName": "Tomcat Heap Memory Usage",
+    "displayNameShort": "Tomcat Heap Memory Usage",
     "unit": "bytecount"
   },
   "TOMCAT_NON_HEAP_MEMORY_USAGE": {
     "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "Tomcat JVM Total memory used in MB.",
-    "displayName": "Tomcat JVM Total Memory",
-    "displayNameShort": "Tomcat JVM Tot Mem Used",
+    "displayName": "Tomcat NonHeap Memory Usage",
+    "displayNameShort": "Tomcat NonHeap Memory Usage",
     "unit": "bytecount"
   },
   "TOMCAT_MEMPOOL_HEAP_OLD/TENURED_GEN": {
