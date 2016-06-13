@@ -69,7 +69,7 @@
         "name" : "port",
         "description": "The port of Tomcat JMX endpoint",
         "type" : "integer",
-        "default": 7199,
+        "default": 8999,
         "required" : true
     },
     {
