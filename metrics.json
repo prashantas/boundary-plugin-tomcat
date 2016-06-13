@@ -56,7 +56,7 @@
     "unit": "number"
   },
   "TOMCAT_HEAP_MEMORY_USAGE": {
-    "defaultAggregate": "AVG",
+    "defaultAggregate": "MAX",
     "defaultResolutionMS": 1000,
     "description": "",
     "displayName": "Tomcat Heap Memory Usage",
@@ -64,7 +64,7 @@
     "unit": "bytecount"
   },
   "TOMCAT_NON_HEAP_MEMORY_USAGE": {
-    "defaultAggregate": "AVG",
+    "defaultAggregate": "MAX",
     "defaultResolutionMS": 1000,
     "description": "Tomcat JVM Total memory used in MB.",
     "displayName": "Tomcat NonHeap Memory Usage",
@@ -72,12 +72,12 @@
     "unit": "bytecount"
   },
   "TOMCAT_MEMPOOL_HEAP_OLD/TENURED_GEN": {
-    "defaultAggregate": "AVG",
+    "defaultAggregate": "MAX",
     "defaultResolutionMS": 1000,
     "description": "Old/Tenured Gen heap memory pool used percentage",
     "displayName": "Tomcat Old/Tenured Gen Used",
     "displayNameShort": "Tomcat  Old/Tenured Gen Used",
-    "unit": "percent"
+    "unit": "bytecount"
   },
   "TOMCAT_MEMPOOL_HEAP_EDEN_SPACE": {
     "defaultAggregate": "MAX",
@@ -85,7 +85,7 @@
     "description": "Eden Space heap memory pool used percentage",
     "displayName": "Tomcat Eden Space Used",
     "displayNameShort": "Tomcat Eden Space Used",
-    "unit": "percent"
+    "unit": "bytecount"
   },
   "TOMCAT_MEMPOOL_HEAP_SURVIVOR_SPACE": {
     "defaultAggregate": "MAX",
@@ -93,7 +93,7 @@
     "description": "Survivor Space heap memory pool used percentage",
     "displayName": "Tomcat Survivor Space Used",
     "displayNameShort": "Tomcat Survivor Space Used",
-    "unit": "percent"
+    "unit": "bytecount"
   },
   "TOMCAT_MEMPOOL_NONHEAP_CODE_CACHE": {
     "defaultAggregate": "MAX",
@@ -101,7 +101,7 @@
     "description": "Code Cache non-heap memory pool used percentage",
     "displayName": "Tomcat Code Cache Used",
     "displayNameShort": "Tomcat Code Cache Used",
-    "unit": "percent"
+    "unit": "bytecount"
   },
   "TOMCAT_MEMPOOL_NONHEAP_METASPACE": {
     "defaultAggregate": "MAX",
@@ -109,7 +109,7 @@
     "description": "Metaspace non-heap memory pool used percentage",
     "displayName": "Tomcat Metaspace Used",
     "displayNameShort": "Tomcat Metaspace Used",
-    "unit": "percent"
+    "unit": "bytecount"
   },
   "TOMCAT_MEMPOOL_NONHEAP_PERM_GEN": {
     "defaultAggregate": "MAX",
@@ -117,7 +117,7 @@
     "description": "Perm Gen non-heap memory pool used percentage",
     "displayName": "Tomcat Perm Gen Used",
     "displayNameShort": "Tomcat Perm Gen Used",
-    "unit": "percent"
+    "unit": "bytecount"
   }
   
 }
