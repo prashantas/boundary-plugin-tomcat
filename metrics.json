@@ -1,6 +1,6 @@
 {
   "TOMCAT_HTTP_BYTES_RECEIVED": {
-    "defaultAggregate": "AVG,
+    "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "Total number of bytes received by Tomcat from the start of the process.",
     "displayName": "Tomcat Http Bytes Received",
@@ -56,7 +56,7 @@
     "unit": "number"
   },
   "TOMCAT_HEAP_MEMORY_USAGE": {
-    "defaultAggregate": "MAX",
+    "defaultAggregate": "AVG",
     "defaultResolutionMS": 1000,
     "description": "",
     "displayName": "Tomcat Heap Memory Usage",
