@@ -1,6 +1,6 @@
 {
   "TOMCAT_HTTP_BYTES_RECEIVED": {
-    "defaultAggregate": "MAX",
+    "defaultAggregate": "AVG,
     "defaultResolutionMS": 1000,
     "description": "Total number of bytes received by Tomcat from the start of the process.",
     "displayName": "Tomcat Http Bytes Received",
