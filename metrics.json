@@ -58,7 +58,7 @@
   "TOMCAT_HEAP_MEMORY_USAGE": {
     "defaultAggregate": "MAX",
     "defaultResolutionMS": 1000,
-    "description": "",
+    "description": "Tomcat Heap Memory Usage",
     "displayName": "Tomcat Heap Memory Usage",
     "displayNameShort": "Tomcat Heap Memory Usage",
     "unit": "bytecount"
@@ -66,7 +66,7 @@
   "TOMCAT_NON_HEAP_MEMORY_USAGE": {
     "defaultAggregate": "MAX",
     "defaultResolutionMS": 1000,
-    "description": "Tomcat JVM Total memory used in MB.",
+    "description": "Tomcat JVM Non Heap memory used in MB.",
     "displayName": "Tomcat NonHeap Memory Usage",
     "displayNameShort": "Tomcat NonHeap Memory Usage",
     "unit": "bytecount"

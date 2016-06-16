@@ -216,7 +216,7 @@
        	{
           "attribute": "HeapMemoryUsage",
           "dataType": "javax.management.openmbean.CompositeData",
-          "metricName": "TOMCAT_HEAP_MOMORY_USAGE",
+          "metricName": "TOMCAT_HEAP_MEMORY_USAGE",
           "key": "used",
           "metricType": "standard",
           "scale": 1,
@@ -231,7 +231,7 @@
        	{
           "attribute": "NonHeapMemoryUsage",
           "dataType": "javax.management.openmbean.CompositeData",
-          "metricName": "TOMCAT_NON_HEAP_MOMORY_USAGE",
+          "metricName": "TOMCAT_NON_HEAP_MEMORY_USAGE",
           "key": "used",
           "metricType": "standard",
           "scale": 1,
